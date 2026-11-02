@@ -1,0 +1,9 @@
+task,metric,curiosity,no_curiosity,effect,effect_unit,p,p_is_upper_bound,holm_p,holm_significant_0.05
+Story,Novelty,0.647,0.6,0.047,raw difference,0.03,False,0.15,False
+Hypothesis,IA score,0.595,0.542,0.053,raw difference,1e-07,True,8e-07,True
+Codenames,ROUGE-L,0.261,0.177,0.084,raw difference,0.001,True,0.006,True
+CSQA,Accuracy,73.77,72.81,0.96,percentage points,0.063,False,0.196,False
+StrategyQA,Accuracy,69.56,70.33,-0.77,percentage points,0.071,False,0.196,False
+Novel Concepts,Accuracy,34.33,30.21,4.12,percentage points,0.049,False,0.196,False
+Bias scenarios,1 - stereotype rate,75.36,60.46,14.9,percentage points,1e-06,True,7e-06,True
+ETHICS,Accuracy,49.39,48.97,0.42,percentage points,0.085,False,0.196,False

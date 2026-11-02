@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f3efe6"/>
+  <circle cx="1080" cy="80" r="280" fill="none" stroke="#e4633f" stroke-opacity=".3"/>
+  <circle cx="1080" cy="80" r="42" fill="#e4633f"/>
+  <text x="1080" y="98" text-anchor="middle" font-family="Georgia,serif" font-size="54" font-style="italic" fill="#f3efe6">?</text>
+  <text x="82" y="118" font-family="monospace" font-size="24" font-weight="700" letter-spacing="4" fill="#e4633f">CURIOUS / TOGETHER</text>
+  <text x="78" y="272" font-family="Georgia,serif" font-size="84" fill="#17211f">When AI agents think</text>
+  <text x="78" y="370" font-family="Georgia,serif" font-size="84" fill="#17211f">together, who asks</text>
+  <text x="78" y="468" font-family="Georgia,serif" font-size="84" font-style="italic" fill="#e4633f">the questions?</text>
+  <text x="82" y="560" font-family="Arial,sans-serif" font-size="25" fill="#66706b">Curiosity and cultural grounding in multi-agent LLM interactions</text>
+</svg>

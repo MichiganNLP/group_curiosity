@@ -1,0 +1,24 @@
+{
+  "models": [
+    "meta-llama/Meta-Llama-3-8B-Instruct",
+    "Qwen/Qwen2.5-14B-Instruct",
+    "mistralai/Mistral-7B-Instruct-v0.3",
+    "deepseek-ai/deepseek-llm-7b-chat",
+    "google/gemma-3-12b-it",
+    "allenai/OLMo-7B-Instruct-hf"
+  ],
+  "tasks": [
+    "story",
+    "hypothesis",
+    "codenames",
+    "csqa",
+    "strategyqa",
+    "novel-concepts",
+    "bias",
+    "ethics"
+  ],
+  "curiosity_conditions": ["all", "one", "none"],
+  "culture_conditions": [false, true],
+  "agents": 3,
+  "note": "Decoding parameters and benchmark splits should follow the paper appendix and venue artifact documentation."
+}

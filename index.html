@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f3efe6" />
+    <meta name="description" content="CuriousTogether studies curiosity and cultural grounding in multi-agent language model interactions." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CuriousTogether" />
+    <meta property="og:description" content="When language models think together, who should ask the questions?" />
+    <meta property="og:image" content="assets/social-card.svg" />
+    <title>CuriousTogether — Multi-Agent Curiosity</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <div class="nav-shell">
+        <a class="wordmark" href="#top" aria-label="CuriousTogether home">
+          <span class="wordmark-mark" aria-hidden="true">?</span>
+          <span>CURIOUS<span class="slash">/</span>TOGETHER</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" data-menu-toggle>
+          <span class="sr-only">Toggle navigation</span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="nav" aria-label="Primary navigation" data-nav>
+          <a href="#framework">Framework</a>
+          <a href="#results">Results</a>
+          <a href="#lessons">Lessons</a>
+          <a href="#paper">Paper</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="orbit orbit-a" aria-hidden="true"></div>
+        <div class="orbit orbit-b" aria-hidden="true"></div>
+        <div class="shell hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow"><span></span> Curiosity as a collective mechanism</p>
+            <h1>What changes when AI agents become <em>curious together?</em></h1>
+            <p class="dek">Implications of Curiosity and Cultural Grounding in Multi-Agent LLM Interactions</p>
+
+            <div class="authors" aria-label="Authors">
+              <a href="mailto:anganab@umich.edu">Angana Borah<sup>1</sup></a>
+              <span>·</span><span>Zoha Hayat Bhatti<sup>1</sup></span>
+              <span>·</span><span>Zhijing Jin<sup>2,3,4</sup></span>
+              <span>·</span><a href="mailto:mihalcea@umich.edu">Rada Mihalcea<sup>1</sup></a>
+            </div>
+            <p class="affiliations">
+              <span><sup>1</sup> University of Michigan</span>
+              <span><sup>2</sup> Jinesis Lab, University of Toronto &amp; Vector Institute</span>
+              <span><sup>3</sup> MPI for Intelligent Systems</span>
+              <span><sup>4</sup> EuroSafeAI</span>
+            </p>
+
+            <p class="hero-summary">Curiosity-guided agents ask, challenge, and revise together. Across reasoning, creativity, and social tasks, that simple interaction pattern changes both what a group discovers and how efficiently it gets there.</p>
+            <div class="button-row">
+              <a class="button button-primary" href="assets/CuriousTogether.pdf">Read the paper <span aria-hidden="true">↗</span></a>
+              <a class="button button-secondary" href="resources.html">Code &amp; data <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+
+          <div class="agent-lab reveal" aria-label="Interactive multi-agent curiosity example">
+            <div class="lab-topbar"><span>INTERACTION LAB</span><span class="live-dot">LIVE MODEL</span></div>
+            <div class="task-card">
+              <span class="tiny-label">TASK · STORY GENERATION</span>
+              <p>“The lighthouse blinked for the first time in a century…”</p>
+            </div>
+            <div class="mode-switch" role="tablist" aria-label="Curiosity allocation">
+              <button type="button" role="tab" aria-selected="true" class="is-active" data-mode="all">All curious</button>
+              <button type="button" role="tab" aria-selected="false" data-mode="one">One curious</button>
+              <button type="button" role="tab" aria-selected="false" data-mode="none">No curiosity</button>
+            </div>
+            <div class="agent-thread" aria-live="polite" data-agent-thread></div>
+            <div class="lab-outcome">
+              <span>Exploration signal</span>
+              <div class="meter"><i data-meter></i></div>
+              <strong data-score>HIGH</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="shell stat-strip reveal" aria-label="Study highlights">
+          <div><strong>7 / 8</strong><span>tasks improve with curiosity</span></div>
+          <div><strong>8</strong><span>tasks across three dimensions</span></div>
+          <div><strong>6</strong><span>open-weight language models</span></div>
+          <div><strong>20.6%</strong><span>gain in semantic diversity</span></div>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="framework">
+        <div class="shell">
+          <div class="section-heading split-heading reveal">
+            <div><p class="kicker">01 — The framework</p><h2>Curiosity is not<br />one behavior.</h2></div>
+            <p>CuriousTogether operationalizes curiosity through task-specific prompts—not as an internal human-like trait. Agents seek missing knowledge, open unexpected directions, or ask about another perspective before producing a collective answer.</p>
+          </div>
+
+          <div class="dimension-explorer reveal">
+            <div class="dimension-tabs" role="tablist" aria-label="Curiosity dimensions">
+              <button class="dimension-tab is-active" role="tab" aria-selected="true" data-dimension="epistemic"><span>01</span> Epistemic</button>
+              <button class="dimension-tab" role="tab" aria-selected="false" data-dimension="novelty"><span>02</span> Novelty-seeking</button>
+              <button class="dimension-tab" role="tab" aria-selected="false" data-dimension="social"><span>03</span> Social</button>
+            </div>
+            <article class="dimension-detail" aria-live="polite">
+              <div class="dimension-symbol" data-dimension-symbol>?</div>
+              <p class="detail-label" data-dimension-label>EPISTEMIC CURIOSITY</p>
+              <blockquote data-dimension-question>“What missing fact would change our answer?”</blockquote>
+              <p data-dimension-copy>Agents reduce information gaps by asking clarifying questions before committing to an answer.</p>
+              <div class="task-chips" data-dimension-tasks><span>CommonsenseQA</span><span>StrategyQA</span><span>Novel Concepts</span></div>
+            </article>
+          </div>
+
+          <div class="pipeline reveal" aria-label="CuriousTogether interaction pipeline">
+            <div class="pipeline-node"><span>01</span><strong>Respond</strong><small>Independent starting point</small></div>
+            <i aria-hidden="true">→</i>
+            <div class="pipeline-node accent"><span>02</span><strong>Question</strong><small>Probe a gap or assumption</small></div>
+            <i aria-hidden="true">→</i>
+            <div class="pipeline-node"><span>03</span><strong>Listen</strong><small>Read the shared history</small></div>
+            <i aria-hidden="true">→</i>
+            <div class="pipeline-node"><span>04</span><strong>Revise</strong><small>Aggregate a final output</small></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="results">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <p class="kicker">02 — What we found</p>
+            <h2>Curiosity helps most<br /><em>when the answer can expand.</em></h2>
+            <p class="heading-copy">Across model families, curiosity-guided groups outperform non-curious groups on seven of eight tasks. The largest benefits appear in creative and social settings; tightly constrained reasoning exposes the cost of too much discussion.</p>
+          </div>
+
+          <div class="result-grid">
+            <article class="result-card feature reveal">
+              <div class="card-index">A</div>
+              <p class="mini-kicker">Curiosity effect</p>
+              <h3>More varied stories,<br />fewer stereotypes.</h3>
+              <div class="comparison" aria-label="Comparison of curious and non-curious settings">
+                <div><span>Story semantic diversity</span><b>0.620</b><div class="bar"><i style="--value: 92%"></i></div><small>curious</small></div>
+                <div><span></span><b>0.514</b><div class="bar muted"><i style="--value: 76%"></i></div><small>non-curious</small></div>
+                <div class="divider"></div>
+                <div><span>Anti-stereotype score</span><b>75.36</b><div class="bar"><i style="--value: 94%"></i></div><small>curious</small></div>
+                <div><span></span><b>60.46</b><div class="bar muted"><i style="--value: 76%"></i></div><small>non-curious</small></div>
+              </div>
+            </article>
+
+            <article class="result-card reveal">
+              <div class="card-index">B</div>
+              <p class="mini-kicker">Allocation matters</p>
+              <h3>All curious for divergence.<br />One curious for focus.</h3>
+              <p>Multiple question-asking agents help story generation and stereotype mitigation. One curious agent often works better for Codenames, hypothesis generation, and Novel Concepts, where coordination costs rise quickly.</p>
+              <div class="balance-visual" aria-hidden="true"><span>EXPLORE</span><i></i><span>COORDINATE</span></div>
+            </article>
+
+            <article class="result-card reveal">
+              <div class="card-index">C</div>
+              <p class="mini-kicker">Culture is selective</p>
+              <h3>Perspective widens the space—sometimes too far.</h3>
+              <p>Country-conditioned agents improve many creative and social outcomes, but can pull precision-oriented reasoning away from a narrow correct answer. Cultural grounding is a prompt-based proxy, not a representation of real people.</p>
+              <div class="culture-orbits" aria-hidden="true"><i></i><i></i><i></i><i></i><b>+</b></div>
+            </article>
+          </div>
+
+          <div class="task-map reveal" aria-label="Eight tasks grouped by curiosity dimension">
+            <div><p>Novelty-seeking</p><span>Story generation</span><span>Hypothesis generation</span><span>Codenames</span></div>
+            <div><p>Epistemic</p><span>CommonsenseQA</span><span>StrategyQA</span><span>Novel Concepts</span></div>
+            <div><p>Social</p><span>Bias scenarios</span><span>ETHICS</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-coral" id="lessons">
+        <div class="shell">
+          <div class="section-heading split-heading reveal">
+            <div><p class="kicker">03 — Design lessons</p><h2>Ask when asking<br />earns its cost.</h2></div>
+            <p>Curiosity introduces useful information and communication overhead at the same time. Good multi-agent design allocates questions according to the task rather than treating more interaction as universally better.</p>
+          </div>
+          <div class="lesson-list">
+            <article class="reveal"><span>01</span><h3>Match curiosity to the task</h3><p>Use broader questioning for divergent, open-ended work; use a single questioner when the group must converge.</p></article>
+            <article class="reveal"><span>02</span><h3>Separate quality from tokens</h3><p>Multi-agent curiosity offers strong quality-per-token on creative and social tasks, while single agents remain efficient for factual reasoning.</p></article>
+            <article class="reveal"><span>03</span><h3>Ground culture carefully</h3><p>Country prompts can activate diverse priors, but they simplify culture and can reproduce broad generalizations if used uncritically.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section paper-section" id="paper">
+        <div class="shell paper-grid">
+          <div class="paper-copy reveal">
+            <p class="kicker">04 — Paper &amp; resources</p>
+            <h2>Explore the full study.</h2>
+            <p>The paper reports model- and task-level results, prompt and round ablations, matched controls, human evaluation, larger-model checks, and token-efficiency analysis.</p>
+            <div class="button-row"><a class="button button-primary" href="assets/CuriousTogether.pdf">Download PDF <span aria-hidden="true">↓</span></a></div>
+          </div>
+          <div class="citation-card reveal">
+            <div class="citation-top"><span>BIBTEX</span><button type="button" data-copy-citation>Copy citation</button></div>
+            <pre><code data-citation>@article{anonymous2026curioustogether,
+  title={CuriousTogether: Implications of Curiosity and
+    Cultural Grounding in Multi-Agent LLM Interactions},
+  author={Borah, Angana and Bhatti, Zoha Hayat and
+    Jin, Zhijing and Mihalcea, Rada},
+  year={2026}
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="shell artifact-band reveal" id="artifact">
+          <div><p class="mini-kicker">Code &amp; data release</p><h3>One repository, ready to reproduce and extend.</h3></div>
+          <p>The release includes portable task runners, curiosity and culture configurations, synthetic examples, aggregate results, statistical summaries, tests, and an anonymization audit.</p>
+          <a class="status-chip" href="resources.html">EXPLORE FILES →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="shell footer-grid">
+        <div><a class="wordmark" href="#top"><span class="wordmark-mark">?</span><span>CURIOUS<span class="slash">/</span>TOGETHER</span></a><p>Curiosity, culture, and collective intelligence.</p></div>
+        <p>Language and Information Technologies Lab<br />University of Michigan</p>
+        <p>© 2026 CuriousTogether</p>
+      </div>
+    </footer>
+  </body>
+</html>

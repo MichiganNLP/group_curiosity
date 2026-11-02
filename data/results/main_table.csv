@@ -1,0 +1,7 @@
+setting,story_novelty,story_semantic_diversity,story_lexical_richness,hypothesis_perplexity,hypothesis_ia_score,hypothesis_idea_distinctness,codenames_bleu,codenames_rouge_l,csqa_accuracy,strategyqa_accuracy,novel_concepts_accuracy,anti_stereotype_score,ethics_accuracy
+curiosity,0.647,0.620,0.787,185.1,0.595,0.840,0.062,0.261,73.77,69.56,34.33,75.36,49.39
+no_curiosity,0.600,0.514,0.729,174.2,0.542,0.790,0.046,0.177,72.81,70.33,30.21,60.46,48.97
+culture,0.647,0.602,0.772,175.4,0.578,0.830,0.060,0.253,73.41,68.37,32.12,76.78,49.39
+no_culture,0.588,0.579,0.774,164.9,0.564,0.832,0.060,0.243,73.77,70.33,34.33,74.68,48.97
+regular_single,0.522,0.507,0.665,236.6,0.559,0.779,0.052,0.220,70.70,66.68,22.40,44.90,44.62
+token_matched_single,0.526,0.543,0.782,84.5,0.729,0.808,0.057,0.259,66.34,62.19,31.67,62.12,46.52
